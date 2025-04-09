@@ -2,31 +2,31 @@ import React from 'react'
 
 export default function RegisterForm(props) {
   return (
-    <>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
     <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg">
     <h2 className="text-2xl font-bold text-center text-gray-800">Créer un compte</h2>
 
     <form action="#" method="POST" className="space-y-4">
       <div>
-        <label for="name" className="block text-sm font-medium text-gray-700">Nom complet</label>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nom complet</label>
         <input type="text" id="name" name="name" required
           className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
 
       <div>
-        <label for="email" className="block text-sm font-medium text-gray-700">Adresse e-mail</label>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Adresse e-mail</label>
         <input type="email" id="email" name="email" required
           className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
 
       <div>
-        <label for="password" className="block text-sm font-medium text-gray-700">Mot de passe</label>
+        <label htmlFor="password" className="block text-sm font-medium text-gray-700">Mot de passe</label>
         <input type="password" id="password" name="password" required
           className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
 
       <div>
-        <label for="confirm-password" className="block text-sm font-medium text-gray-700">Confirmer le mot de passe</label>
+        <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700">Confirmer le mot de passe</label>
         <input type="password" id="confirm-password" name="confirm-password" required
           className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
@@ -38,10 +38,10 @@ export default function RegisterForm(props) {
     </form>
 
     <p className="text-sm text-center text-gray-600">
-      Déjà inscrit ? <a href="#" onClick={props.onClick} className="text-blue-600 hover:underline">Connectez-vous</a>
+      Déjà inscrit ? <p  onClick={props.onClick} className="text-blue-600 hover:underline">Connectez-vous</p>
     </p>
   </div>
-  </>
+  </div>
 
   )
 }
