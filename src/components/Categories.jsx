@@ -6,7 +6,6 @@ const CategoryPage = () => {
   const [name, setName] = useState("");
   const [editingId, setEditingId] = useState(null);
 
-  // Récupérer les catégories
   const fetchCategories = async () => {
     try {
       const res = await api.get("/admin/categories");
@@ -16,18 +15,16 @@ const CategoryPage = () => {
     }
   };
 
-  // Ajouter une nouvelle catégorie
   const addCategory = async (newCategory) => {
     try {
       const res = await api.post("/admin/categories", newCategory);
       setCategories([...categories, res.data.category]);
-      setName(""); // Réinitialiser l'input
+      setName(""); 
     } catch (error) {
       console.error("Erreur lors de l'ajout de la catégorie", error);
     }
   };
 
-  // Supprimer une catégorie
   const deleteCategory = async (id) => {
     try {
       await api.delete(`/admin/categories/${id}`);
@@ -37,7 +34,6 @@ const CategoryPage = () => {
     }
   };
 
-  // Mettre à jour une catégorie
   const updateCategory = async (id, updatedCategory) => {
     try {
       const res = await api.put(`/admin/categories/${id}`, updatedCategory);
